@@ -1,0 +1,78 @@
+<% include ../partials/header.ejs %>
+<div class="container">
+    <h2>New Person Page</h2>
+    <form action="/display" method="POST">
+        <div class="row mt-3">
+            <div class="col">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="age" placeholder="Age">
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="height" placeholder="Height in cm">
+            </div>
+        </div>
+
+        <h4 class="mt-2">Gender</h4>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" id ='male' type="radio" name="gender" value='Male'>
+            <label class="form-check-label" for='male'>Male</label>
+        </div>
+
+        <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" id ='female' type="radio" name="gender" value='Female'>
+            <label class="form-check-label" for='female'>Female</label>
+        </div>
+
+        <h4 class="mt-2">Cloth Size</h4>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" id ='size1' type="radio" name="size" value='Small'>
+            <label class="form-check-label" for='size1'>Small</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" id ='size2' type="radio" name="size" value='Medium'>
+            <label class="form-check-label" for='size2'>Medium</label>
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" id ='size3' type="radio" name="size" value='Large'>
+            <label class="form-check-label" for='size3'>Large</label>
+        </div>
+        <h4 class="mt-2">Religion Type</h4>
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type1' type="radio" name="type" value='Christianity'>
+            <label class="form-check-label" for="type1">Christianity</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type2' type="radio" name="type" value='Islam'>
+            <label class="form-check-label" for="type2">Islam</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type3' type="radio" name="type" value="Hinduism">
+            <label class="form-check-label" for="type3">Hinduism</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type4' type="radio" name="type" value="Judaism">
+            <label class="form-check-label" for="type4">Judaism</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type5' type="radio" name="type" value="Buddhism">
+            <label class="form-check-label" for="type5">Buddhism</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type6' type="radio" name="type" value="Other">
+            <label class="form-check-label" for="type6">Other</label>
+        </div>
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type7' type="radio" name="type" value="None">
+            <label class="form-check-label" for="type7">None</label>
+        </div>
+        <button type='submit'>Submit</button>
+    </form>
+
+    <!-- size, height, and type -->
+<a href="/display">Go back</a>
+</div>
+
+</body>
+</html>

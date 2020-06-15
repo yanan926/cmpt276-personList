@@ -1,0 +1,136 @@
+<% include ../partials/header.ejs %>
+<div class="container">
+    <h2>Edit <%=person.name %> </h2>
+    <form action="/display/<%=person._id%>" method="POST">
+
+        <div class="row mt-3">
+            <div class="col">
+                <input type="text" class="form-control" id="name" name="name" value=<%= person.name %>>
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="age" value= <%=person.age %>>
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="height" value=<%=person.height %>>
+            </div>
+        </div>
+
+        <h4 class="mt-2">Gender</h4>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" id ='male' type="radio" name="gender" value='Male'
+            <%if(person.gender==='Male'){%>
+                <%="checked"%>
+            <%}%>>
+            <label class="form-check-label" for='male'>Male</label>
+        </div>
+
+        <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" id ='female' type="radio" name="gender" value='Female'
+            <%if(person.gender==='Female'){%>
+                <%="checked"%>
+            <%}%>
+            >
+            <label class="form-check-label" for='female'>Female</label>
+        </div>
+
+        <h4 class="mt-2">Cloth Size</h4>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" id ='size1' type="radio" name="size" value='Small'
+            <%if(person.size==='Small'){%>
+                <%="checked"%>
+            <%}%>>
+            <label class="form-check-label" for='size1'>Small</label>
+
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" id ='size2' type="radio" name="size" value='Medium'
+            <%if(person.size==='Medium'){%>
+                <%="checked"%>
+            <%}%>
+            >
+            <label class="form-check-label" for='size2'>Medium</label>
+            
+        </div>
+        <div class="custom-control custom-radio custom-control-inline">
+            <input class="form-check-input" id ='size3' type="radio" name="size" value='Large'
+            <%if(person.size==='Large'){%>
+                <%="checked"%>
+            <%}%>
+            >
+            <label class="form-check-label" for='size3'>Large</label>
+        </div>
+
+        <h4 class="mt-2">Religion Type</h4>
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type1' type="radio" name="type" value='Christianity'
+            <%if(person.type==='Christianity'){%>
+                <%="checked"%>
+            <%}%>
+            >
+            <label class="form-check-label" for="type1">Christianity</label>
+        </div>
+
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type2' type="radio" name="type" value='Islam'
+            <%if(person.type==='Islam'){%>
+                <%="checked"%>
+            <%}%>
+            >
+            <label class="form-check-label" for="type2">Islam</label>
+        </div>
+
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type3' type="radio" name="type" value='Hinduism'
+            <%if(person.type==='Hinduism'){%>
+                <%="checked"%>
+            <%}%>
+            >
+            <label class="form-check-label" for="type3">Hinduism</label>
+        </div>
+
+
+
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type4' type="radio" name="type" value='Judaism'
+            <%if(person.type==='Judaism'){%>
+                <%="checked"%>
+            <%}%>
+            >
+            <label class="form-check-label" for="type4">Judaism</label>
+        </div>
+
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type5' type="radio" name="type" value='Buddhism'
+            <%if(person.type==='Buddhism'){%>
+                <%="checked"%>
+            <%}%>
+            >
+            <label class="form-check-label" for="type5">Buddhism</label>
+        </div>
+
+        <div class="custom-control custom-radio">
+            <input class="form-check-input" id ='type5' type="radio" name="type" value='Other'
+            <%if(person.type==='Other'){%>
+                <%="checked"%>
+            <%}%>
+            >
+            <label class="form-check-label" for="type5">Other</label>
+        </div>
+
+        <div class="custom-control custom-radio mb-3">
+            <input class="form-check-input" id ='type5' type="radio" name="type" value='None'
+            <%if(person.type==='None'){%>
+                <%="checked"%>
+            <%}%>
+            >
+            <label class="form-check-label" for="type5">None</label>
+        </div>
+
+
+        <button type='submit' class="btn btn-primary mb-2">Submit</button>
+    </form>
+<a href="/display/<%=person.id%>" class="btn btn-warning">Go back</a>
+</div>
+
+</body>
+</html>

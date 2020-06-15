@@ -1,0 +1,70 @@
+<% include ../partials/header.ejs %>
+<div class="container">
+    <header class="jumbotron" style="background-image: url(https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+        <div class="container">
+            <h1 class="display-4">Wecome to the virtual friends page</h1>
+            <p class="lead">This is a place that you may create many virtual friends.</p>
+            <p class="lead"><a class="btn btn-primary btn-lg" href="/new">Add New Friend</a></p>
+        </div>
+    </header>
+    <div class="row" style="display: flex;flex-wrap: wrap;">
+        <!--  
+        <% peopleList.forEach(p => { %>
+            <div class="col-md-3 col-sm-6">
+                <%= p.name %>
+                <img class="img-thumbnail" src="<%= p.url %> " alt="">
+            </div>
+        <% }); %>
+        -->
+
+        <% peopleList.forEach(p => { %>
+        <div class="card col-md-3 col-sm-6">
+            <img class="card-img-top" src="<%= p.url %>" alt="Card image cap">
+            <div class="card-body">
+                <div class="d-flex">
+                    <h5 class="card-title mr-3"> <%= p.name %></h5>
+                    <% if (p.gender === 'Female') { %>
+                        <i class="fas fa-female fa-2x mr-2"></i>
+                      <% } else { %>
+                        <i class="fas fa-male fa-2x mr-2"></i>
+                       <% } %>
+
+                       <% if (p.size === 'Small') { %>
+                        <i class="fas fa-tshirt mr-2"></i>
+                      <% } else if (p.size === 'Medium'){ %>
+                        <i class="fas fa-tshirt fa-2x mr-2"></i>
+                      <% } else if (p.size === 'Large'){ %>
+                            <i class="fas fa-tshirt fa-3x mr-2"></i>
+                           <% } %>
+
+                           <% if (p.type === 'Christianity') { %>
+                            <i class="fas fa-cross fa-2x"></i>
+                          <% } else if (p.type === 'Islam'){ %>
+                            <i class="fas fa-star-and-crescent fa-2x"></i>
+                          <% } else if (p.type === 'Hinduism'){ %>
+                            <i class="fas fa-om fa-2x">Hinduism</i>
+                            <% } else if (p.type === 'Judaism'){ %>
+                                <i class="fas fa-star-of-david fa-2x"></i>
+                            <% } else if (p.type === 'Buddhism'){ %>
+                                <i class="fas fa-dharmachakra fa-2x"></i>
+                            <% } else if (p.type === 'Other'){ %>
+                                <i class="fas fa-praying-hands fa-2x"></i>
+                            <% } else if (p.type === 'None'){ %>
+                                <i class="fas fa-ban">Religon</i>
+                            <% } %>
+                </div>
+              <a href="/display/<%= p.id%>" class="btn btn-primary mt-2">More Info</a>
+
+
+               
+            </div>
+          </div>
+          <% }); %>
+    </div>
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<% include ../partials/header.ejs %>
+<div class="container col-lg-6">
+    <div class="card" >
+        <img class="card-img-top" src="<%=person.url%> " alt="<%=person.name%>">
+        <div class="card-body">
+          <h5 class="card-title text-center"><%=person.name%></h5>
+          <ul class="list-group list-group-flush text-center">
+            <li class="list-group-item">Age: <%=person.age%> </li>
+            <li class="list-group-item">Gender: <%=person.gender%> </li>
+            <li class="list-group-item">Height: <%=person.height%> </li>
+            <li class="list-group-item">Size: <%=person.size%></li>
+            <li class="list-group-item">Religion Type: <%=person.type%></li>
+          </ul>
+          <div class="d-flex flex-row-reverse">
+            <a href="/display/<%= person.id%>/edit" class="btn btn-warning mr-2">Edit</a>
+            <form action="/display/<%=person._id%>/delete" method="POST">
+                <button class="btn btn-danger"  class="btn btn-danger">Delete</button>
+            </form>
+            <a href="/display" class="btn btn-primary">Go back</a>
+          </div>
+        </div>
+      </div>
+   
+</div>
+</body>
+</html>
