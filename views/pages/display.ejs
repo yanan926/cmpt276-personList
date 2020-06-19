@@ -21,8 +21,8 @@
         <div class="card col-md-3 col-sm-6">
             <img class="card-img-top" src="<%= p.url %>" alt="Card image cap">
             <div class="card-body">
-                <div class="d-flex">
-                    <h5 class="card-title mr-3"> <%= p.name %></h5>
+              <h5 class="card-title mr-3 d-flex justify-content-center"> <%= p.name %></h5>
+                <div class="text-center">
                     <% if (p.gender === 'Female') { %>
                         <i class="fas fa-female fa-2x mr-2"></i>
                       <% } else { %>
@@ -52,11 +52,9 @@
                             <% } else if (p.type === 'None'){ %>
                                 <i class="fas fa-ban">Religon</i>
                             <% } %>
+                            
                 </div>
-              <a href="/display/<%= p.id%>" class="btn btn-primary mt-2">More Info</a>
-
-
-               
+                  <a href="/display/<%= p.id%>" class="btn btn-primary mt-3">More Info</a>
             </div>
           </div>
           <% }); %>
